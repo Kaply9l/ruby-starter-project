@@ -1,5 +1,5 @@
 require_relative 'app_states/input_from'
-require_relative 'app_states/wnloads/ruby-starter-project-7b061f57f00b0534d004e690bd1129756a5bdba0/ruby-starter-project-7b061f57f00b0534d004e690bd1129756a5bdba0/lib/app_states/exit'
+require_relative 'app_states/exit'
 
 class Application
   def run
