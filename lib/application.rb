@@ -1,13 +1,12 @@
-require_relative 'context'
-require_relative 'app_states/input'
-require_relative 'app_states/exit'
+require_relative 'app_states/input_from'
+require_relative 'app_states/wnloads/ruby-starter-project-7b061f57f00b0534d004e690bd1129756a5bdba0/ruby-starter-project-7b061f57f00b0534d004e690bd1129756a5bdba0/lib/app_states/exit'
 
 class Application
   def run
-    context = Context.new(Input.new)
-    until context.state.is_a? Exit
-      context.render
-      context.next
+    state = InputFrom.new
+    until state.is_a? Exit
+      state.render
+      state = state.next
     end
   end
 end
